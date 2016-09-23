@@ -1,5 +1,5 @@
 [run]
-include = wod_new/*
+include = wod/*
 omit = *migrations*, *tests*
 plugins =
     django_coverage_plugin

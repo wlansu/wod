@@ -167,7 +167,7 @@ html_static_path = ['_static']
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'wod_newdoc'
+htmlhelp_basename = 'woddoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -187,7 +187,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
     ('index',
-     'wod_new.tex',
+     'wod.tex',
      'wod-new Documentation',
      """Wouter Lansu""", 'manual'),
 ]
@@ -218,7 +218,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'wod_new', 'wod-new Documentation',
+    ('index', 'wod', 'wod-new Documentation',
      ["""Wouter Lansu"""], 1)
 ]
 
@@ -232,7 +232,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    ('index', 'wod_new', 'wod-new Documentation',
+    ('index', 'wod', 'wod-new Documentation',
      """Wouter Lansu""", 'wod-new',
      """A project to store your pc's, npc's and notes for your World of Darkness Campaigns.""", 'Miscellaneous'),
 ]

@@ -12,8 +12,8 @@ from __future__ import absolute_import, unicode_literals
 
 import environ
 
-ROOT_DIR = environ.Path(__file__) - 3  # (wod_new/config/settings/common.py - 3 = wod_new/)
-APPS_DIR = ROOT_DIR.path('wod_new')
+ROOT_DIR = environ.Path(__file__) - 3  # (wod/config/settings/common.py - 3 = wod/)
+APPS_DIR = ROOT_DIR.path('wod')
 
 env = environ.Env()
 
@@ -44,8 +44,11 @@ THIRD_PARTY_APPS = (
 # Apps specific for this project go here.
 LOCAL_APPS = (
     # custom users app
-    'wod_new.users.apps.UsersConfig',
-    # Your stuff: custom apps go here
+    'wod.users.apps.UsersConfig',
+    'wod.characters',
+    'wod.mage_rules',
+    'wod.wod_rules',
+    'wod.rules_variables',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -66,7 +69,7 @@ MIDDLEWARE_CLASSES = (
 # MIGRATIONS CONFIGURATION
 # ------------------------------------------------------------------------------
 MIGRATION_MODULES = {
-    'sites': 'wod_new.contrib.sites.migrations'
+    'sites': 'wod.contrib.sites.migrations'
 }
 
 # DEBUG
@@ -99,7 +102,7 @@ MANAGERS = ADMINS
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///wod_new'),
+    'default': env.db('DATABASE_URL', default='postgres:///wod'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
@@ -213,8 +216,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
-ACCOUNT_ADAPTER = 'wod_new.users.adapters.AccountAdapter'
-SOCIALACCOUNT_ADAPTER = 'wod_new.users.adapters.SocialAccountAdapter'
+ACCOUNT_ADAPTER = 'wod.users.adapters.AccountAdapter'
+SOCIALACCOUNT_ADAPTER = 'wod.users.adapters.SocialAccountAdapter'
 
 # Custom user app defaults
 # Select the correct user model
@@ -226,7 +229,7 @@ LOGIN_URL = 'account_login'
 AUTOSLUG_SLUGIFY_FUNCTION = 'slugify.slugify'
 
 ########## CELERY
-INSTALLED_APPS += ('wod_new.taskapp.celery.CeleryConfig',)
+INSTALLED_APPS += ('wod.taskapp.celery.CeleryConfig',)
 # if you are not using the django database broker (e.g. rabbitmq, redis, memcached), you can remove the next line.
 INSTALLED_APPS += ('kombu.transport.django',)
 BROKER_URL = env('CELERY_BROKER_URL', default='django://')

@@ -1,0 +1,1 @@
+[{"fields": {"name": "Lust"}, "model": "wod_rules.vice", "pk": 1}, {"fields": {"name": "Greed"}, "model": "wod_rules.vice", "pk": 2}, {"fields": {"name": "Pride"}, "model": "wod_rules.vice", "pk": 3}, {"fields": {"name": "Gluttony"}, "model": "wod_rules.vice", "pk": 4}, {"fields": {"name": "Wrath"}, "model": "wod_rules.vice", "pk": 5}]

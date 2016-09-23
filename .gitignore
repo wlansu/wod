@@ -45,9 +45,9 @@ htmlcov
 # Provided default Pycharm Run/Debug Configurations should be tracked by git
 # In case of local modifications made by Pycharm, use update-index command
 # for each changed file, like this:
-# git update-index --assume-unchanged .idea/wod_new.iml
+# git update-index --assume-unchanged .idea/wod.iml
 !.idea/runConfigurations/
-!.idea/wod_new.iml
+!.idea/wod.iml
 !.idea/vcs.xml
 !.idea/webResources.xml
 
@@ -68,7 +68,7 @@ node_modules/
 .env
 
 # User-uploaded media
-wod_new/media/
+wod/media/
 
 
 

@@ -16,10 +16,11 @@ urlpatterns = [
     url(settings.ADMIN_URL, include(admin.site.urls)),
 
     # User management
-    url(r'^users/', include('wod_new.users.urls', namespace='users')),
+    url(r'^users/', include('wod.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here
+    url(r'^characters/', include("wod.characters.urls", namespace="characters")),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

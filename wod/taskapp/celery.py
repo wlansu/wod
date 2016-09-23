@@ -11,11 +11,11 @@ if not settings.configured:
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.local')  # pragma: no cover
 
 
-app = Celery('wod_new')
+app = Celery('wod')
 
 
 class CeleryConfig(AppConfig):
-    name = 'wod_new.taskapp'
+    name = 'wod.taskapp'
     verbose_name = 'Celery Config'
 
     def ready(self):

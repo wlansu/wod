@@ -1,0 +1,1 @@
+[{"fields": {"name": "Charity"}, "model": "wod_rules.virtue", "pk": 1}, {"fields": {"name": "Fortitude"}, "model": "wod_rules.virtue", "pk": 2}, {"fields": {"name": "Justice"}, "model": "wod_rules.virtue", "pk": 3}]

@@ -1,5 +1,5 @@
 {
-  "name": "wod_new",
+  "name": "wod",
   "description": "A project to store your pc's, npc's and notes for your World of Darkness Campaigns.",
   "env": {
     "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-python",

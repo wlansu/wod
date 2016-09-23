@@ -66,8 +66,8 @@ To run a celery worker:
 
 .. code-block:: bash
 
-    cd wod_new
-    celery -A wod_new.taskapp worker -l info
+    cd wod
+    celery -A wod.taskapp worker -l info
 
 Please note: For Celery's import magic to work, it is important *where* the celery commands are run. If you are in the same folder with *manage.py*, you should be right.
 

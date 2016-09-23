@@ -1,2 +1,2 @@
 web: gunicorn config.wsgi:application
-worker: celery worker --app=wod_new.taskapp --loglevel=info
+worker: celery worker --app=wod.taskapp --loglevel=info
